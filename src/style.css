@@ -1,0 +1,88 @@
+@font-face { font-family: Sahel; src: url('../assets/Sahel-Bold-FD.ttf') format('truetype'); }
+@font-face { font-family: Vazirmatn; src: url('../assets/Vazirmatn-Regular.ttf') format('truetype'); }
+html {
+  --color-bger: #EADBC8;
+  --color-bg: #F8F0E5;
+  --color-primary: #46CDCF;
+  --color-text: #102C57;
+}
+html.dark {
+  --color-bger: #121212;
+  --color-bg: #222831;
+  --color-primary: #46CDCF;
+  --color-text: #EEEEEE;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+  background: var(--color-bger);
+}
+body {
+  font-size: 1.8rem;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: Vazirmatn, sans-serif;
+  line-height: 1.8;
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 3rem 8rem;
+}
+hr {
+  border: none;
+  border-radius: 10rem;
+  height: 0.3rem;
+  margin: 3rem 0;
+  background: var(--color-primary);
+}
+img {
+  display: block;
+  border: 0.2rem solid var(--color-primary);
+  border-radius: 1rem;
+  width: 100%;
+  margin: 0 auto 3rem auto;
+}
+audio {
+  display: block;
+  width: 100%;
+  margin: 0 auto 3rem auto;
+}
+a:link, a:visited {
+  --color: currentColor;
+  border-bottom: 2px solid var(--color);
+  color: var(--color);
+  text-decoration: none;
+  transition: color 200ms, border 200ms;
+}
+a:hover, a:active { --color: var(--color-primary); }
+input { accent-color: var(--color-primary); }
+p { text-align: justify; }
+.settings {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.arabic {
+  margin-bottom: 2rem;
+  font: 2rem Sahel, sans-serif;
+  line-height: 2.5;
+}
+.setting { cursor: pointer; }
+.heading { font: 200% Sahel, sans-serif; padding: 1rem 0; }
+.heading--title, .description { text-align: center; }
+.heading--title::before { content: '«'; color: var(--color-primary); }
+.heading--title::after  { content: '»'; color: var(--color-primary); }
+.persian:not(:last-of-type) { margin-bottom: 5rem; }
+.mb-sm { margin-bottom: 2rem; }
+
+@media screen and (max-width: 35em) {
+  body {
+    padding: 3rem 2rem;
+  }
+}
