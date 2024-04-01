@@ -5,6 +5,7 @@ html {
   --color-bg: #F8F0E5;
   --color-primary: #46CDCF;
   --color-text: #102C57;
+  --radius: 1rem;
 }
 html.dark {
   --color-bger: #121212;
@@ -41,7 +42,7 @@ hr {
 img {
   display: block;
   border: 0.2rem solid var(--color-primary);
-  border-radius: 1rem;
+  border-radius: var(--radius);
   width: 100%;
   margin: 0 auto 3rem auto;
 }
@@ -49,6 +50,7 @@ audio {
   display: block;
   width: 100%;
   margin: 0 auto 3rem auto;
+  border-radius: var(--radius);
 }
 a:link, a:visited {
   --color: currentColor;
@@ -61,6 +63,10 @@ a:hover, a:active { --color: var(--color-primary); }
 input { accent-color: var(--color-primary); }
 p { text-align: justify; }
 .settings {
+  background: var(--color-text);
+  color: var(--color-bg);
+  border-radius: var(--radius);
+  padding: 1rem 0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
